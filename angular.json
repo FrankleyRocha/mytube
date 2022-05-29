@@ -31,8 +31,14 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
-            "scripts": [],
+            "styles": [
+              "src/theme/variables.scss", 
+              "src/global.scss",
+              "node_modules/plyr/dist/plyr.css"
+            ],
+            "scripts": [
+              "node_modules/plyr/dist/plyr.min.js"
+            ],
             "aot": false,
             "vendorChunk": true,
             "extractLicenses": false,
