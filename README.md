@@ -8,8 +8,10 @@ Tecnologias:
 
 #teste
 execute:
+```sh
 git clone https://github.com/FrankleyRocha/mytube.git
 ionic serve
+```
 
 #acesse
 http://localhost:8100
