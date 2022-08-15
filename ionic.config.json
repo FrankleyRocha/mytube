@@ -1,7 +1,0 @@
-{
-  "name": "mytube",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
