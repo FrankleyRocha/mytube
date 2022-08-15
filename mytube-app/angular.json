@@ -1,4 +1,4 @@
-{
+ {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
@@ -31,12 +31,13 @@
               }
             ],
             "styles": [
-              "node_modules/video.js/dist/video-js.min.css",
+              "node_modules/plyr/dist/plyr.css",
               "src/theme/variables.scss",
               "src/global.scss"
             ],
             "scripts": [
-              "node_modules/video.js/dist/video.min.js"
+              "node_modules/plyr/dist/plyr.min.js",
+              "node_modules/jquery/dist/jquery.min.js"
             ],
             "aot": false,
             "vendorChunk": true,
