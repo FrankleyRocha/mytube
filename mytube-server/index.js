@@ -4,6 +4,8 @@ const ytdl = require("ytdl-core");
 const cors = require('cors');
 const https = require('https');
 
+const PORT = process.env.PORT || 3001;
+
 app.use((req, res, next) => {
 	//Qual site tem permissão de realizar a conexão, no exemplo abaixo está o "*" indicando que qualquer site pode fazer a conexão
     res.header("Access-Control-Allow-Origin", "*");
@@ -13,39 +15,12 @@ app.use((req, res, next) => {
     next();
 });
 
-app.listen(3001, () => {
-	console.log("Server is running on http://localhost:3001");
+app.listen(PORT, () => {
+	console.log(`Server is running on http://localhost:${PORT}`);
 });
 
 app.get("/", (req, res) => {
-
-	let url = req.query.url;
-
-	console.log(url);
-
-	let request = https.get(url, (res_) => { 
-
-		if (res_.statusCode !== 200) {
-			console.error(`Did not get an OK from the server. Code: ${res_.statusCode}`);
-			res_.resume();
-			return;
-		}
-
-		let data = '';
-
-		res_.on('data', (chunk) => {
-			data += chunk;
-		});
-
-		res_.on('close', () => {
-			//console.log('Retrieved all data');
-			//console.log(JSON.parse(data));
-			return res.send(data);
-		});
-
-	});
-
-	//return res.send("Olá mundo!");
+	return res.send("ok");
 });
 
 app.get("/info/:id", async (req, res) => {
